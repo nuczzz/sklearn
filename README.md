@@ -11,7 +11,7 @@ Collecting numpy>=1.8.2 (from scikit-learn->sklearn)
   Could not find a version that satisfies the requirement numpy>=1.8.2 (from scikit-learn->sklearn) (from versions: )
 No matching distribution found for numpy>=1.8.2 (from scikit-learn->sklearn)
 ```
-You can install 'numpy' with command:
+You can install 'numpy' (maybe numpy+mkl) with command:
 ```
 pip install numpy
 ```
