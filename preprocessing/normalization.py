@@ -1,8 +1,11 @@
 from sklearn import preprocessing
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
-#1.standard
-#2.normalization: x'=(x-min)/(max-min), x"=x'*(mx-mi)+mi
+
+#1.normalization: x'=(x-min)/(max-min), x"=x'*(mx-mi)+mi
+
+#2.standard: x'=(x-avg)/std
+#for every column, 'avg' is average of value, and 'std' is standard deviation
 
 
 def preprocessing_demo():
@@ -10,7 +13,7 @@ def preprocessing_demo():
 	data = pd.read_csv("data.txt")
 	data = data.iloc[:, :3]
 	
-	#
+	#normalization
 	transfer = MinMaxScaler()
 	data_new = transfer.fit_transform(data)
 	print(data_new)
